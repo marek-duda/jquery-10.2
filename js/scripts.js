@@ -1,15 +1,12 @@
-var span = $('span');
-var paragraphs = $('p');
-
-span.each(function(index, element) {
+$('span').each(function(index, element) {
 	if(index % 2 == 0) {
 		$(element).css('color', 'red');
 	};
 });
 
-paragraphs.each(function(index, element) {
+$('p').each(function(index, element) {
 
-    var button = '<button class="btn" data-tmp="' + index + '">Click me</button>';
+    var button = $('<button/>').addClass('btn').attr({ 'data-tmp': index }).text('Click me');
     $(element).append(button); 
 
 });
